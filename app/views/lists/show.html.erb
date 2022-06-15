@@ -1,0 +1,25 @@
+<div class="col-lg-12">
+    <h2 class="list-title"> <%= @list.name %> Movies</h2>
+  <div class="list-title" class="btn-style">
+    <p><%= link_to "Bookmark +",  new_list_bookmark_path(@list), class: "btn btn-success" %></p>
+    <p><%= link_to "<- Back", lists_path, class:"btn btn-secondary"%></p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row align-items-start">
+    <div class="col-lg-12">
+      <div class="list-title" class="movies-grid">
+      
+        <% @list.movies.each do |movie| %>
+        <img class="img-poster" src="<%= movie.poster_url %>">
+        <h1><%= movie.title %> - <%= movie.rating %></h1>
+        <h6><%= movie.overview %></h6>
+        <p><%= movie.poster_url %></p>
+        <p><%= link_to "Delete Bookmark", list_path(@list), method: :destroy, data: { confirm: 'Are you sure?' } %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+

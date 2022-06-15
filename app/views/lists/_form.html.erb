@@ -1,0 +1,5 @@
+<%= simple_form_for(@lists) do |f| %>
+  <%= f.input :name %>
+  <%= f.submit class: 'btn btn-success mt-3' %>
+  <%= f.button :button, 'Back', type: :back, class: 'btn btn-danger mt-3' %>
+<% end %>

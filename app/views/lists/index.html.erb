@@ -1,0 +1,52 @@
+
+<%= render 'header' %>
+
+<div class="container">
+
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-10">
+
+      <div class="mt-3 text-center">
+        <p><%= link_to "Create new List",  new_list_path(@list), class: "btn btn-primary rounded-pill" %></p>
+      </div>
+    </div> 
+  </div>
+  <div class="col-12 col-lg-12 ">
+    <div class="row ">
+      <% @lists.each do |list| %>
+        <div class="col-xl-3 col-lg-6">
+          <div class="card l-bg-blue-dark">
+              <div class="card-statistic-3 p-4">
+                <div class="card-icon card-icon-large"><i class="fas fa-play me-2"></i></div>
+                <div class="mb-4">
+                    <h5 class="card-title mb-0">Enjoy the list</h5>
+                </div>
+                <div class="row align-items-center mb-2 d-flex">
+                    <div class="col-8">
+                        <h4 class="d-flex align-items-center">
+                            <%= list.name  %>
+                            <div class="col-2 ms-2" style="margin-right: 0px;">
+                      <span><%= link_to "+", list_path(list), class: "btn btn-info rounded-pill" %></span>
+                    </div>
+                        </h4>
+                    </div>
+                    
+                </div>
+                <div class="progress mt-1 " data-height="8" style="height: 8px;">
+                    <div class="progress-bar l-bg-cyan" role="progressbar" data-width="25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;"></div>
+                </div>
+              </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+

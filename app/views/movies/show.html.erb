@@ -1,0 +1,7 @@
+<h1><%= @movies.title %> - <%= @movies.rating %></h1>
+<br>
+<h6><%= @movies.overview %></h6>
+<br>
+<p><%= @movies.poster_url %></p>
+<%= link_to "Delete", movies_path(@movies) %>
+<%= link_to "Back", :back %>

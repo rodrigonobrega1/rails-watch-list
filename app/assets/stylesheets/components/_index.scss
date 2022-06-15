@@ -4,4 +4,12 @@
 @import "form_legend_clear";
 @import "navbar";
 @import "banner";
-@import "cards";
+
+
+.btn-blue {
+    //background: linear-gradient(to right, #373b44, #4286f4) !important;
+    color: #fff;
+    height: 80px;
+    width: 170px;
+    border-radius: 25px;
+}

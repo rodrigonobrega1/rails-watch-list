@@ -33,7 +33,7 @@ class ListsController < ApplicationController
     @lists = List.bookmark.find(params[:id])
     @lists.destroy
 
-    redirect_to @pokemon.trainer
+    redirect_to lists_path
   end
 
   private

@@ -8,6 +8,8 @@ class BookmarksController < ApplicationController
       end
     
       def show;  end
+
+      def edit; end
     
       def new
         @bookmark = Bookmark.new

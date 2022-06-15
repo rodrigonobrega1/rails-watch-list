@@ -1,0 +1,16 @@
+<div class="container">
+
+    <div class="row justify-content-center">
+        <div class="col-sm-12 col-lg-3">
+            <%= simple_form_for [@list, @bookmark] do |f| %>
+            <%= f.input :comment %>
+            <%= f.association :movie %>
+            <%= f.submit class: 'btn btn-success rounded-pill mt-3' %>
+            <% end %>
+
+            <p><%= link_to "Delete bookmark", list_bookmark_path(@bookmark), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-outline-danger rounded-pill mt-2" %></p>
+        </div>
+    </div>
+
+
+</div>

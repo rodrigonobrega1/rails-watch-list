@@ -1,5 +1,7 @@
 <%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.input :comment %>
-  <%= f.association :movie %>
-  <%= f.submit class: 'btn-submit mt-3' %>
+  <%= f.label :Comment %>
+  <%= f.input :comment, label: false %>
+  <%= f.label :Movie %>
+  <%= f.association :movie, label: false %>
+  <%= f.submit class: 'btn btn-success rounded-pill mt-3' %>
 <% end %>

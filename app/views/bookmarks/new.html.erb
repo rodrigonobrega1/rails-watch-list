@@ -1,13 +1,14 @@
 
-<div class="container">
-  <div class="">
-    <div class="row new-form">
-      <div class="col-lg-6 left-bg-list">
-      </div>
-      <div class="col-lg-6 right-bg" >
-        <%= render 'form', bookmark: @bookmark %>
+ 
+<div class="container mt-5">
+  <%= link_to "Back", list_path(@list), class: "btn btn-secondary rounded-pill" %>
+    <div class="">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-4  right-bg justify-content-center text-center align-items-center border p-5" style="border-radius: 20px;" >
+          <%= render 'form', bookmark: @bookmark %>
+        </div>
       </div>
     </div>
-  </div>
 </div>
-  <%= link_to "Back", list_path(@list) %>
+
+ 

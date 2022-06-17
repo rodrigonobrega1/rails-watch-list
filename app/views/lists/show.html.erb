@@ -13,12 +13,11 @@
   <div class="row justify-content-center">
     <% @list.movies.each do |movie| %>
       <div class="col-sm-12 col-lg-3">
-        <div class="border p-4 text-center" style="border-radius: 20px; width: 300px; height: 500px">
+        <div class="border p-4 text-center" style="border-radius: 20px; width: 300px; height: 100%">
           <img class="img-poster" src="<%= movie.poster_url %>">
           <h6><%= movie.title %> - <%= movie.rating %><i class="ms-2 fas fa-star" style="color: gold;"></i></h6>
           <p class="p-2" style="color: grey;"><%= movie.overview %></p>
           <div class="text-center"style="position: absolute; bottom: 0;">
-          <p><%= link_to "Delete Bookmark", list_path(@list), method: :destroy, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger rounded-pill" %></p>
           </div>
         </div>
       </div>
